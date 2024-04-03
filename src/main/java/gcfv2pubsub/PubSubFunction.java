@@ -58,7 +58,7 @@ public class PubSubFunction implements CloudEventsFunction {
     String jsonString = jsonObject.toString();
     String finalToken = Base64.getEncoder().encodeToString(jsonString.getBytes());
 
-    String verificationLink = "http://brianmarcelpatrao.me:8080/verify?token=" + finalToken;
+    String verificationLink = "https://brianmarcelpatrao.me/verify?token=" + finalToken;
     logger.info("Verification link: " + verificationLink);
 
     try {
